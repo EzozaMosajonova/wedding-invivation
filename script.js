@@ -17,6 +17,16 @@ function updateCountdown() {
         clearInterval(interval);
         document.querySelector('.countdown').innerHTML = "To'y boshlandi!";
     }
+
+    const music = document.getElementById("music");
+
+    document.body.addEventListener("touchstart", () => {
+        music.play();
+    }, { once: true });
+
+    document.body.addEventListener("click", () => {
+        music.play();
+    }, { once: true });
 }
 
 const interval = setInterval(updateCountdown, 1000);
